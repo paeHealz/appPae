@@ -8,21 +8,21 @@
         android:layout_height="wrap_content"
         android:id="@+id/etEdad"
         android:layout_gravity="center_horizontal"
-        android:text="Age" />
+        android:hint="Age" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/etPeso"
         android:layout_gravity="center_horizontal"
-        android:text="Weight" />
+        android:hint="Weight" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/etAltura"
         android:layout_gravity="center_horizontal"
-        android:text="Height" />
+        android:hint="Height" />
 
     <RadioButton
         android:layout_width="wrap_content"
