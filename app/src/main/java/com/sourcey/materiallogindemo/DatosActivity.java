@@ -19,7 +19,7 @@ public class DatosActivity extends AppCompatActivity {
 
     @Bind(R.id.etEdad) EditText etEdad;
     @Bind(R.id.etPeso) EditText etPeso;
-    @Bind(R.id.etAltura) Button etAltura;
+    @Bind(R.id.etAltura) EditText etAltura;
     @Bind(R.id.btNext) Button btNext;
     @Bind(R.id.rbMan)  RadioButton rbMan;
     @Bind(R.id.rbWoman)  RadioButton rbWoman;
@@ -30,13 +30,44 @@ public class DatosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_datos);
         ButterKnife.bind(this);
-
+        etEdad.setEnabled(true);
         btNext.setEnabled(false);
-        
+        etPeso.setEnabled(false);
+        etAltura.setEnabled(false);
+        rbWoman.setEnabled(false);
+        rbMan.setEnabled(false);
+
+        rbMan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                rbWoman.setChecked(false);
+            }
+        });
+        rbWoman.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                rbMan.setChecked(false);
+            }
+        });
+
+        if(etEdad.getText()!=null){
+            etAltura.setEnabled(true);
+            if(etAltura.getText()!=null){
+                etPeso.setEnabled(true);
+                if(etPeso.getText()!=null){
+                    rbWoman.setEnabled(true);
+                    rbMan.setEnabled(true);
+                    if(rbMan.isChecked()|| rbWoman.isChecked()){
+                        btNext.setEnabled(true);
+                    }
+                }
+            }
+        }
         btNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if
+
+
             }
         });
     }
