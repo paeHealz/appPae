@@ -82,31 +82,6 @@ public class DatosActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {}
         });
 
-       /* etEdad.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
-                etPeso.setEnabled(true);
-                return false;
-            }
-        });*/
-
-       /* etPeso.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
-                etAltura.setEnabled(true);
-                return false;
-            }
-        });
-
-        etAltura.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
-                rbWoman.setEnabled(true);
-                rbMan.setEnabled(true);
-                return false;
-            }
-        });*/
-
         rbMan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
